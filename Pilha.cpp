@@ -1,11 +1,11 @@
 #include "Pilha.h"
-
-void Stack::empilhar(int valor) {
+using namespace std;
+void Pilha::empilhar(int valor) {
     pilha.push(valor);
 }
 
-bool Stack::encontrar(int valor) {
-    std::stack<int> pilhaTemporaria = pilha;
+bool Pilha::encontrar(int valor) {
+    stack<int> pilhaTemporaria = pilha;
     while (!pilhaTemporaria.empty()) {
         if (pilhaTemporaria.top() == valor) {
             return true;
@@ -15,13 +15,13 @@ bool Stack::encontrar(int valor) {
     return false;
 }
 
-void Stack::desempilhar() {
+void Pilha::desempilhar() {
     if (!pilha.empty()) {
         pilha.pop();
     }
 }
 
-void Stack::removerK(int k) {
+void Pilha::removerK(int k) {
     for (int i = 0; i < k && !pilha.empty(); ++i) {
         pilha.pop();
     }
