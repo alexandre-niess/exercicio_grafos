@@ -1,28 +1,28 @@
-#include "Stack.h"
+#include "Pilha.h"
 
-void Stack::push(int value) {
-    stack.push(value);
+void Stack::empilhar(int valor) {
+    pilha.push(valor);
 }
 
-bool Stack::find(int value) {
-    std::stack<int> tempStack = stack;
-    while (!tempStack.empty()) {
-        if (tempStack.top() == value) {
+bool Stack::encontrar(int valor) {
+    std::stack<int> pilhaTemporaria = pilha;
+    while (!pilhaTemporaria.empty()) {
+        if (pilhaTemporaria.top() == valor) {
             return true;
         }
-        tempStack.pop();
+        pilhaTemporaria.pop();
     }
     return false;
 }
 
-void Stack::pop() {
-    if (!stack.empty()) {
-        stack.pop();
+void Stack::desempilhar() {
+    if (!pilha.empty()) {
+        pilha.pop();
     }
 }
 
-void Stack::removeK(int k) {
-    for (int i = 0; i < k && !stack.empty(); ++i) {
-        stack.pop();
+void Stack::removerK(int k) {
+    for (int i = 0; i < k && !pilha.empty(); ++i) {
+        pilha.pop();
     }
 }
