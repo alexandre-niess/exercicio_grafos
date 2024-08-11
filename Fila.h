@@ -9,7 +9,7 @@ public:
     void enfileirar(int valor);
     bool encontrar(int valor);
     void desenfileirar();
-    void removeK(int k);
+    void removerK(int k);
 
 private:
     queue<int> fila;

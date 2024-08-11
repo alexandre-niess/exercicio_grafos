@@ -8,7 +8,7 @@ class Matrix {
 public:
     Matrix(int rows, int cols);
     void set(int row, int col, int valor);
-    bool find(int valor);
+    bool encontrar(int valor);
     void removeK(int k);
 
 private:

@@ -11,7 +11,7 @@ void Matrix::set(int row, int col, int valor) {
     }
 }
 
-bool Matrix::find(int valor) {
+bool Matrix::encontrar(int valor) {
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols; ++j) {
             if (matrix[i][j] == valor) {

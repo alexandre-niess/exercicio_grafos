@@ -21,7 +21,7 @@ void Fila::desenfileirar() {
     }
 }
 
-void Fila::removeK(int k) {
+void Fila::removerK(int k) {
     for (int i = 0; i < k && !fila.empty(); ++i) {
         fila.pop();
     }

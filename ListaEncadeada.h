@@ -13,7 +13,7 @@ public:
     void adicionar(int valor);
     bool encontrar(int valor);
     void remover(int valor);
-    void removerPrimeirosK(int k);
+    void removerPrimeiroK(int k);
 
 private:
     No* cabeca;

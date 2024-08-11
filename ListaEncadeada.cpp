@@ -35,7 +35,7 @@ void ListaEncadeada::remover(int valor) {
     }
 }
 
-void ListaEncadeada::removerPrimeirosK(int k) {
+void ListaEncadeada::removerPrimeiroK(int k) {
     for (int i = 0; i < k && cabeca != nullptr; ++i) {
         No* temp = cabeca;
         cabeca = cabeca->proximo;
