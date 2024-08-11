@@ -1,18 +1,19 @@
 #ifndef MATRIX_H
 #define MATRIX_H
+using namespace std;
 
 #include <vector>
 
 class Matrix {
 public:
     Matrix(int rows, int cols);
-    void set(int row, int col, int value);
-    bool find(int value);
+    void set(int row, int col, int valor);
+    bool find(int valor);
     void removeK(int k);
 
 private:
     int rows, cols;
-    std::vector<std::vector<int>> matrix;
+    vector<vector<int>> matrix;
 };
 
 #endif // MATRIX_H
