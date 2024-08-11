@@ -1,44 +1,44 @@
-#include "LinkedList.h"
+#include "ListaEncadeada.h"
 
-LinkedList::LinkedList() : head(nullptr) {}
+LinkedList::LinkedList() : cabeca(nullptr) {}
 
-void LinkedList::add(int value) {
-    Node* newNode = new Node{value, head};
-    head = newNode;
+void LinkedList::adicionar(int valor) {
+    No* novoNo = new No{valor, cabeca};
+    cabeca = novoNo;
 }
 
-bool LinkedList::find(int value) {
-    Node* current = head;
-    while (current != nullptr) {
-        if (current->data == value) {
+bool LinkedList::encontrar(int valor) {
+    No* atual = cabeca;
+    while (atual != nullptr) {
+        if (atual->dado == valor) {
             return true;
         }
-        current = current->next;
+        atual = atual->proximo;
     }
     return false;
 }
 
-void LinkedList::remove(int value) {
-    Node* current = head;
-    Node* previous = nullptr;
-    while (current != nullptr && current->data != value) {
-        previous = current;
-        current = current->next;
+void LinkedList::remover(int valor) {
+    No* atual = cabeca;
+    No* anterior = nullptr;
+    while (atual != nullptr && atual->dado != valor) {
+        anterior = atual;
+        atual = atual->proximo;
     }
-    if (current != nullptr) {
-        if (previous == nullptr) {
-            head = current->next;
+    if (atual != nullptr) {
+        if (anterior == nullptr) {
+            cabeca = atual->proximo;
         } else {
-            previous->next = current->next;
+            anterior->proximo = atual->proximo;
         }
-        delete current;
+        delete atual;
     }
 }
 
-void LinkedList::removeFirstK(int k) {
-    for (int i = 0; i < k && head != nullptr; ++i) {
-        Node* temp = head;
-        head = head->next;
+void LinkedList::removerPrimeirosK(int k) {
+    for (int i = 0; i < k && cabeca != nullptr; ++i) {
+        No* temp = cabeca;
+        cabeca = cabeca->proximo;
         delete temp;
     }
 }
