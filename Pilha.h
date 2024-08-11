@@ -3,10 +3,11 @@
 
 #include <stack>
 
-class Stack {
+class Pilha 
+{
 public:
-    void push(int value);
-    bool find(int value);
+    void push(int valor);
+    bool find(int valor);
     void pop();
     void removeK(int k);
 
