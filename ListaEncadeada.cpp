@@ -1,13 +1,13 @@
 #include "ListaEncadeada.h"
 
-LinkedList::LinkedList() : cabeca(nullptr) {}
+ListaEncadeada::ListaEncadeada() : cabeca(nullptr) {}
 
-void LinkedList::adicionar(int valor) {
+void ListaEncadeada::adicionar(int valor) {
     No* novoNo = new No{valor, cabeca};
     cabeca = novoNo;
 }
 
-bool LinkedList::encontrar(int valor) {
+bool ListaEncadeada::encontrar(int valor) {
     No* atual = cabeca;
     while (atual != nullptr) {
         if (atual->dado == valor) {
@@ -18,7 +18,7 @@ bool LinkedList::encontrar(int valor) {
     return false;
 }
 
-void LinkedList::remover(int valor) {
+void ListaEncadeada::remover(int valor) {
     No* atual = cabeca;
     No* anterior = nullptr;
     while (atual != nullptr && atual->dado != valor) {
@@ -35,7 +35,7 @@ void LinkedList::remover(int valor) {
     }
 }
 
-void LinkedList::removerPrimeirosK(int k) {
+void ListaEncadeada::removerPrimeirosK(int k) {
     for (int i = 0; i < k && cabeca != nullptr; ++i) {
         No* temp = cabeca;
         cabeca = cabeca->proximo;
