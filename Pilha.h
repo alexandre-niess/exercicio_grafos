@@ -1,18 +1,19 @@
-#ifndef STACK_H
-#define STACK_H
+#ifndef PILHA_H
+#define PILHA_H
 
 #include <stack>
+using namespace std;
 
 class Pilha 
 {
 public:
-    void push(int valor);
-    bool find(int valor);
-    void pop();
-    void removeK(int k);
+    void empilhar(int valor);
+    bool encontrar(int valor);
+    void desempilhar();
+    void removerK(int k);
 
 private:
-    std::stack<int> stack;
+    stack<int> pilha;
 };
 
-#endif // STACK_H
+#endif // PILHA_H
